@@ -1,0 +1,21 @@
+server{
+	listen 80;
+	<% if(ssl){ %>listen 443 ssl;<%}%>
+	server_name <%=server_name%>;
+	root <%=root%>;
+	index <%=index%>;
+	<% if(ssl){%>
+	ssl on;
+	ssl_certificate <%=ssl.certificate%>;
+	ssl_certificate_key <%=ssl.certificate_key%>;
+	ssl_session_timeout 5m;
+	ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2 SSLv3;
+	ssl_prefer_server_ciphers on;
+	<%}%>
+	<% for(let i = 0;i<location.length;i++){%>
+	location <%=location[i].path%> {
+		<%=location[i].rule%>
+	}
+	<%}%>
+}

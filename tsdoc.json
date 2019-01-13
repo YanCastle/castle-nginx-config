@@ -1,0 +1,37 @@
+{
+	"tags":
+	{
+		"allowUnknownTags" : true
+	},
+	"plugins":[
+		 "plugins/markdown"
+		,"/Users/YanPengQuan/AppData/Local/Yarn/Data/global/node_modules/tsdoc/template/plugins/TSDoc.js"
+	],
+	"opts":
+	{
+		"template"	:"/Users/YanPengQuan/AppData/Local/Yarn/Data/global/node_modules/tsdoc/template",
+		"recurse"	:"true"
+	},
+	"templates" : {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false
+	},
+	"source":
+	{
+		"includePattern": "(\\.d)?\\.ts$"
+	},
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	},
+	"tsdoc":{
+		"source"		:"/Github/castle-nginx-config/src/",
+		"destination"	:"/Github/castle-nginx-config/docs",
+		"tutorials"		:"",
+		"systemName"	: "castle-nginx-config",
+		"footer"		: "",
+		"copyright"		: "castle-nginx-config Copyright © 2019 YanPengQuan.",
+		"outputSourceFiles" : true,
+		"commentsOnly": true
+	}
+}

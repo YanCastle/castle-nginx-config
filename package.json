@@ -1,0 +1,15 @@
+{
+  "name": "castle-nginx-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/YanCastle/castle-nginx-config",
+  "author": "CastleMY <490523604@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/ejs": "^2.6.1",
+    "@types/node": "^10.12.18"
+  }
+}
