@@ -79,6 +79,7 @@ export function ejs_render(file: string, data: any): Promise<any> {
 // (async () => {
 //     let config = new nginxConfig();
 //     config.addLocation('proxy_pass http://www.baidu.com/;')
+//     config.addLocation('proxy_pass http://www.baidu.com/;', '/.well-known/acme-challenge/')
 //     config.server_name = ['www.tansuyun.cn']
 //     config.setSsl('./key', './key')
 //     console.log(await gen_conf(config))
